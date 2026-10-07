@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f172a">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#1e293b">
+
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="رابط Hotspot..."
+            android:textColorHint="#94a3b8"
+            android:textColor="#e2e8f0"
+            android:inputType="textUri"
+            android:background="#0f172a"
+            android:padding="10dp"
+            android:maxLines="1"/>
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="فتح"
+            android:layout_marginStart="6dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:background="#1e293b">
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0 ملف"
+            android:textColor="#94a3b8"
+            android:textSize="13sp"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"/>
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مسح"/>
+
+        <Button
+            android:id="@+id/btnZip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ZIP"
+            android:layout_marginStart="6dp"
+            android:enabled="false"/>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="الملفات الملتقطة"
+        android:textColor="#38bdf8"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="#1e293b"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#0f172a"/>
+</LinearLayout>
